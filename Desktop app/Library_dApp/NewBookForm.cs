@@ -16,6 +16,26 @@ namespace Library_dApp
         public NewBookForm()
         {
             InitializeComponent();
+            bookBindingSource.DataSource = new Book();
+        }
+
+        private void CancelsimpleButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void SavesimpleButton_Click(object sender, EventArgs e)
+        {
+            var newbook = (Book)bookBindingSource.DataSource;
+            var db = new LibraryEntities();
+
+            db.Books.Add(newbook);
+            db.SaveChanges();
+
+            XtraMessageBox.Show("book added sucessfully");
+            DialogResult = DialogResult.OK;
+
         }
     }
 }

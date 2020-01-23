@@ -50,3 +50,10 @@ C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\EntityFramework.
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\EntityFramework.xml
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\DevExpress.XtraLayout.v15.2.dll
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\DevExpress.XtraLayout.v15.2.xml
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.NewBookForm.resources

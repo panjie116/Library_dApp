@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.XtraBars.v15.2" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v15.2" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -179,6 +180,9 @@
     <EmbeddedResource Include="My Library.resx">
       <DependentUpon>My Library.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewBookForm.resx">
+      <DependentUpon>NewBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,6 +198,8 @@
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
+    <None Include="Book.datasource" />
+    <None Include="Member.datasource" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

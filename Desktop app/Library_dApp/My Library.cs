@@ -22,5 +22,11 @@ namespace Library_dApp
             login.ShowDialog();
             login.WindowState = FormWindowState.Minimized;
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var newbook = new NewBookForm();
+            newbook.ShowDialog();
+        }
     }
 }
