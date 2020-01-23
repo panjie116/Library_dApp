@@ -28,5 +28,12 @@ namespace Library_dApp
             var newbook = new NewBookForm();
             newbook.ShowDialog();
         }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var listBooks = new ListBooksForm();
+            listBooks.Show();
+            listBooks.WindowState = FormWindowState.Maximized;
+        }
     }
 }
