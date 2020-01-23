@@ -52,14 +52,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LendForm.Designer.cs">
+      <DependentUpon>LendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LentBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LentBooksForm.Designer.cs">
+      <DependentUpon>LentBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBooksForm.Designer.cs">
+      <DependentUpon>ListBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListMembersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListMembersForm.Designer.cs">
+      <DependentUpon>ListMembersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListUsersForm.Designer.cs">
+      <DependentUpon>ListUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoggingInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoggingInForm.Designer.cs">
+      <DependentUpon>LoggingInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="My Library.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Library.Designer.cs">
       <DependentUpon>My Library.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewBookForm.Designer.cs">
+      <DependentUpon>NewBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMemberForm.Designer.cs">
+      <DependentUpon>NewMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverdueBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverdueBooksForm.Designer.cs">
+      <DependentUpon>OverdueBooksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnedBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnedBooksForm.Designer.cs">
+      <DependentUpon>ReturnedBooksForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="My Library.resx">
       <DependentUpon>My Library.cs</DependentUpon>
     </EmbeddedResource>
