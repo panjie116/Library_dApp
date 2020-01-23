@@ -76,7 +76,7 @@
             this.ribbonPage1,
             this.ribbonPage2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(958, 134);
+            this.ribbonControl1.Size = new System.Drawing.Size(956, 129);
             // 
             // barButtonItem1
             // 
@@ -219,19 +219,20 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "VS2010";
             // 
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 508);
+            this.ClientSize = new System.Drawing.Size(956, 507);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl1;
             this.Text = "main form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

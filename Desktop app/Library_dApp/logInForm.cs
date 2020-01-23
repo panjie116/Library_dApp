@@ -17,5 +17,43 @@ namespace Library_dApp
         {
             InitializeComponent();
         }
+
+        private void CancelsimpleButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SavesimpleButton_Click(object sender, EventArgs e)
+        {
+            var db = new LibraryEntities();
+
+            if (UsernametextBox.Text != string.Empty && PasswordtextBox.Text != string.Empty)
+            {
+                var userExist = db.Users.SingleOrDefault(a => a.Username.Equals(UsernametextBox.Text));
+                if(userExist != null)
+                {
+                    if (userExist.Password.Equals(PasswordtextBox.Text))
+                    {
+                        XtraMessageBox.Show("Welcome: " + userExist.Username, "logged in", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("wrong password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("user not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                   
+
+            }
+
+            else
+            {
+                XtraMessageBox.Show("insert fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

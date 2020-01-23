@@ -15,5 +15,12 @@ namespace Library_dApp
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            var login = new logInForm();
+            login.ShowDialog();
+            login.WindowState = FormWindowState.Minimized;
+        }
     }
 }

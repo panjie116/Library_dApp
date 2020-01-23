@@ -5,24 +5,24 @@
       <PropertyRef Name="BookISBN" />
     </Key>
     <Property Name="BookName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="BookISBN" Type="numeric" Precision="25" Scale="0" Nullable="false" />
+    <Property Name="BookISBN" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Author" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Edition" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Year published" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Edition" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Year published" Type="date" Nullable="false" />
     <Property Name="Reserve?" Type="bit" Nullable="false" />
   </EntityType>
-  <EntityType Name="BorrowedHistory">
+  <EntityType Name="Borrowedhistories">
     <Key>
-      <PropertyRef Name="MemberId" />
+      <PropertyRef Name="MemberName" />
     </Key>
     <Property Name="MemberName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="MemberId" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="BookISBN" Type="numeric" Precision="25" Scale="0" Nullable="false" />
+    <Property Name="BookISBN" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="DueDate" Type="date" Nullable="false" />
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="members">
+  <EntityType Name="Members">
     <Key>
       <PropertyRef Name="MemberId" />
       <PropertyRef Name="MemberName" />
@@ -30,7 +30,7 @@
     <Property Name="MemberId" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="MemberName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Program" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Level" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+    <Property Name="Level" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Hostel" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -50,66 +50,44 @@
     <Property Name="FullName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK_BorrowedHistory_Books">
+  <Association Name="FK_Borrowedhistories_Books">
     <End Role="Books" Type="Self.Books" Multiplicity="1" />
-    <End Role="BorrowedHistory" Type="Self.BorrowedHistory" Multiplicity="*" />
+    <End Role="Borrowedhistories" Type="Self.Borrowedhistories" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Books">
         <PropertyRef Name="BookISBN" />
       </Principal>
-      <Dependent Role="BorrowedHistory">
+      <Dependent Role="Borrowedhistories">
         <PropertyRef Name="BookISBN" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_BorrowedHistory_Users">
-    <End Role="Users" Type="Self.Users" Multiplicity="1" />
-    <End Role="BorrowedHistory" Type="Self.BorrowedHistory" Multiplicity="*" />
+  <Association Name="FK_Borrowedhistories_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1" />
+    <End Role="Borrowedhistories" Type="Self.Borrowedhistories" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Users">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="BorrowedHistory">
-        <PropertyRef Name="Username" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_BorrowedHistory_Users1">
-    <End Role="Users" Type="Self.Users" Multiplicity="1" />
-    <End Role="BorrowedHistory" Type="Self.BorrowedHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Users">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="BorrowedHistory">
-        <PropertyRef Name="Username" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_members_BorrowedHistory">
-    <End Role="BorrowedHistory" Type="Self.BorrowedHistory" Multiplicity="1" />
-    <End Role="members" Type="Self.members" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="BorrowedHistory">
+      <Principal Role="Members">
         <PropertyRef Name="MemberId" />
-      </Principal>
-      <Dependent Role="members">
-        <PropertyRef Name="MemberId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_members_BorrowedHistory1">
-    <End Role="BorrowedHistory" Type="Self.BorrowedHistory" Multiplicity="1" />
-    <End Role="members" Type="Self.members" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="BorrowedHistory">
-        <PropertyRef Name="MemberId" />
-      </Principal>
-      <Dependent Role="members">
         <PropertyRef Name="MemberName" />
+      </Principal>
+      <Dependent Role="Borrowedhistories">
+        <PropertyRef Name="MemberId" />
+        <PropertyRef Name="MemberName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Borrowedhistories_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Borrowedhistories" Type="Self.Borrowedhistories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Username" />
+      </Principal>
+      <Dependent Role="Borrowedhistories">
+        <PropertyRef Name="Username" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -146,29 +124,21 @@
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="LibraryModelStoreContainer">
     <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BorrowedHistory" EntityType="Self.BorrowedHistory" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="members" EntityType="Self.members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Borrowedhistories" EntityType="Self.Borrowedhistories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_BorrowedHistory_Books" Association="Self.FK_BorrowedHistory_Books">
+    <AssociationSet Name="FK_Borrowedhistories_Books" Association="Self.FK_Borrowedhistories_Books">
       <End Role="Books" EntitySet="Books" />
-      <End Role="BorrowedHistory" EntitySet="BorrowedHistory" />
+      <End Role="Borrowedhistories" EntitySet="Borrowedhistories" />
     </AssociationSet>
-    <AssociationSet Name="FK_BorrowedHistory_Users" Association="Self.FK_BorrowedHistory_Users">
+    <AssociationSet Name="FK_Borrowedhistories_Members" Association="Self.FK_Borrowedhistories_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Borrowedhistories" EntitySet="Borrowedhistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Borrowedhistories_Users" Association="Self.FK_Borrowedhistories_Users">
       <End Role="Users" EntitySet="Users" />
-      <End Role="BorrowedHistory" EntitySet="BorrowedHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_BorrowedHistory_Users1" Association="Self.FK_BorrowedHistory_Users1">
-      <End Role="Users" EntitySet="Users" />
-      <End Role="BorrowedHistory" EntitySet="BorrowedHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_members_BorrowedHistory" Association="Self.FK_members_BorrowedHistory">
-      <End Role="BorrowedHistory" EntitySet="BorrowedHistory" />
-      <End Role="members" EntitySet="members" />
-    </AssociationSet>
-    <AssociationSet Name="FK_members_BorrowedHistory1" Association="Self.FK_members_BorrowedHistory1">
-      <End Role="BorrowedHistory" EntitySet="BorrowedHistory" />
-      <End Role="members" EntitySet="members" />
+      <End Role="Borrowedhistories" EntitySet="Borrowedhistories" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

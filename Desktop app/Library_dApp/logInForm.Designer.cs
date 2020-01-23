@@ -78,6 +78,7 @@
             // 
             this.PasswordtextBox.Location = new System.Drawing.Point(392, 85);
             this.PasswordtextBox.Name = "PasswordtextBox";
+            this.PasswordtextBox.PasswordChar = '*';
             this.PasswordtextBox.Size = new System.Drawing.Size(100, 21);
             this.PasswordtextBox.TabIndex = 2;
             // 
@@ -88,20 +89,25 @@
             this.SavesimpleButton.Size = new System.Drawing.Size(75, 23);
             this.SavesimpleButton.TabIndex = 3;
             this.SavesimpleButton.Text = "Save";
+            this.SavesimpleButton.Click += new System.EventHandler(this.SavesimpleButton_Click);
             // 
             // CancelsimpleButton
             // 
+            this.CancelsimpleButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelsimpleButton.Location = new System.Drawing.Point(417, 152);
             this.CancelsimpleButton.Name = "CancelsimpleButton";
             this.CancelsimpleButton.Size = new System.Drawing.Size(75, 23);
             this.CancelsimpleButton.TabIndex = 3;
             this.CancelsimpleButton.Text = "Cancel";
+            this.CancelsimpleButton.Click += new System.EventHandler(this.CancelsimpleButton_Click);
             // 
             // logInForm
             // 
+            this.AcceptButton = this.SavesimpleButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 261);
+            this.CancelButton = this.CancelsimpleButton;
+            this.ClientSize = new System.Drawing.Size(599, 261);
             this.Controls.Add(this.CancelsimpleButton);
             this.Controls.Add(this.SavesimpleButton);
             this.Controls.Add(this.PasswordtextBox);
@@ -110,6 +116,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "logInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "logInForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

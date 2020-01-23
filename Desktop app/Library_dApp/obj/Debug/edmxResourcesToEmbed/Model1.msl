@@ -13,9 +13,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="BorrowedHistories">
-      <EntityTypeMapping TypeName="LibraryModel.BorrowedHistory">
-        <MappingFragment StoreEntitySet="BorrowedHistory">
+    <EntitySetMapping Name="Borrowedhistories">
+      <EntityTypeMapping TypeName="LibraryModel.Borrowedhistory">
+        <MappingFragment StoreEntitySet="Borrowedhistories">
           <ScalarProperty Name="MemberName" ColumnName="MemberName" />
           <ScalarProperty Name="MemberId" ColumnName="MemberId" />
           <ScalarProperty Name="BookISBN" ColumnName="BookISBN" />
@@ -25,9 +25,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="members">
-      <EntityTypeMapping TypeName="LibraryModel.member">
-        <MappingFragment StoreEntitySet="members">
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="LibraryModel.Member">
+        <MappingFragment StoreEntitySet="Members">
           <ScalarProperty Name="MemberId" ColumnName="MemberId" />
           <ScalarProperty Name="MemberName" ColumnName="MemberName" />
           <ScalarProperty Name="Program" ColumnName="Program" />
