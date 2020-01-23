@@ -58,11 +58,11 @@
     <Compile Include="LendForm.Designer.cs">
       <DependentUpon>LendForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LentBooksForm.cs">
+    <Compile Include="ListLentBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LentBooksForm.Designer.cs">
-      <DependentUpon>LentBooksForm.cs</DependentUpon>
+    <Compile Include="ListLentBooksForm.Designer.cs">
+      <DependentUpon>ListLentBooksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ListBooksForm.cs">
       <SubType>Form</SubType>
@@ -82,11 +82,11 @@
     <Compile Include="ListUsersForm.Designer.cs">
       <DependentUpon>ListUsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoggingInForm.cs">
+    <Compile Include="logInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoggingInForm.Designer.cs">
-      <DependentUpon>LoggingInForm.cs</DependentUpon>
+    <Compile Include="logInForm.Designer.cs">
+      <DependentUpon>logInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="My Library.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,9 @@
     <Compile Include="ReturnedBooksForm.Designer.cs">
       <DependentUpon>ReturnedBooksForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="logInForm.resx">
+      <DependentUpon>logInForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Library.resx">
       <DependentUpon>My Library.cs</DependentUpon>
     </EmbeddedResource>

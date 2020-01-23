@@ -44,3 +44,4 @@ C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.exe
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.exe
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.pdb
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.MainForm.resources
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.logInForm.resources

@@ -1,6 +1,6 @@
 ﻿namespace Library_dApp
 {
-    partial class LentBooksForm
+    partial class ListLentBooksForm
     {
         /// <summary>
         /// Required designer variable.

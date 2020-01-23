@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace Library_dApp
 {
-    public partial class LentBooksForm : DevExpress.XtraEditors.XtraForm
+    public partial class ListLentBooksForm : DevExpress.XtraEditors.XtraForm
     {
-        public LentBooksForm()
+        public ListLentBooksForm()
         {
             InitializeComponent();
         }
