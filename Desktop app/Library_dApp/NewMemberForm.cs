@@ -16,6 +16,27 @@ namespace Library_dApp
         public NewMemberForm()
         {
             InitializeComponent();
+            memberBindingSource.DataSource = new Member();
+        }
+
+        private void CancelsimpleButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void SavesimpleButton_Click(object sender, EventArgs e)
+        {
+            var newmember = (Member)memberBindingSource.DataSource;
+            var db = new LibraryEntities();
+
+            db.Members.Add(newmember);
+            db.SaveChanges();
+
+            DialogResult = DialogResult.OK;
+            XtraMessageBox.Show("new member added sucessfully");
+
+
         }
     }
 }

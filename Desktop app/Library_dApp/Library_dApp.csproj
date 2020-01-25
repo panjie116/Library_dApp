@@ -188,6 +188,9 @@
     <EmbeddedResource Include="NewBookForm.resx">
       <DependentUpon>NewBookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewMemberForm.resx">
+      <DependentUpon>NewMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

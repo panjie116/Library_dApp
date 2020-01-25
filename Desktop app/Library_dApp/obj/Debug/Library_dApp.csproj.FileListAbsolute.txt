@@ -96,3 +96,4 @@ C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\es\DevExpress.Pd
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.ListBooksForm.resources
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.NewMemberForm.resources
