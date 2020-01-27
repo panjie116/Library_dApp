@@ -228,6 +228,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="User.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">

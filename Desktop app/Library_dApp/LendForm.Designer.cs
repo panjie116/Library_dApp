@@ -33,7 +33,6 @@
             this.MemberNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.MemberIdTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.BookISBNTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.StatusTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.BookTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -51,14 +50,15 @@
             this.MemberTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.UserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForUsername = new DevExpress.XtraLayout.LayoutControlItem();
-            this.UsernameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.StatusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.UsernameTextEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.borrowedhistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookISBNTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -75,8 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.MemberTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -84,12 +86,12 @@
             this.dataLayoutControl1.Controls.Add(this.MemberNameTextEdit);
             this.dataLayoutControl1.Controls.Add(this.MemberIdTextEdit);
             this.dataLayoutControl1.Controls.Add(this.BookISBNTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.UsernameTextEdit);
             this.dataLayoutControl1.Controls.Add(this.DueDateDateEdit);
-            this.dataLayoutControl1.Controls.Add(this.StatusTextEdit);
             this.dataLayoutControl1.Controls.Add(this.BookTextEdit);
             this.dataLayoutControl1.Controls.Add(this.MemberTextEdit);
             this.dataLayoutControl1.Controls.Add(this.UserTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.StatusTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.UsernameTextEdit);
             this.dataLayoutControl1.DataSource = this.borrowedhistoryBindingSource;
             this.dataLayoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForBook,
@@ -129,15 +131,6 @@
             this.BookISBNTextEdit.Size = new System.Drawing.Size(473, 20);
             this.BookISBNTextEdit.StyleController = this.dataLayoutControl1;
             this.BookISBNTextEdit.TabIndex = 6;
-            // 
-            // StatusTextEdit
-            // 
-            this.StatusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.borrowedhistoryBindingSource, "Status", true));
-            this.StatusTextEdit.Location = new System.Drawing.Point(83, 108);
-            this.StatusTextEdit.Name = "StatusTextEdit";
-            this.StatusTextEdit.Size = new System.Drawing.Size(473, 20);
-            this.StatusTextEdit.StyleController = this.dataLayoutControl1;
-            this.StatusTextEdit.TabIndex = 9;
             // 
             // BookTextEdit
             // 
@@ -304,11 +297,37 @@
             this.ItemForUsername.Text = "Username";
             this.ItemForUsername.TextSize = new System.Drawing.Size(68, 13);
             // 
+            // StatusTextEdit
+            // 
+            this.StatusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.borrowedhistoryBindingSource, "Status", true));
+            this.StatusTextEdit.EditValue = "";
+            this.StatusTextEdit.Location = new System.Drawing.Point(83, 108);
+            this.StatusTextEdit.Name = "StatusTextEdit";
+            this.StatusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.StatusTextEdit.Properties.Items.AddRange(new object[] {
+            "Borrowed",
+            "Returned"});
+            this.StatusTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.StatusTextEdit.Size = new System.Drawing.Size(473, 20);
+            this.StatusTextEdit.StyleController = this.dataLayoutControl1;
+            this.StatusTextEdit.TabIndex = 9;
+            // 
             // UsernameTextEdit
             // 
             this.UsernameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.borrowedhistoryBindingSource, "Username", true));
             this.UsernameTextEdit.Location = new System.Drawing.Point(83, 132);
             this.UsernameTextEdit.Name = "UsernameTextEdit";
+            this.UsernameTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.UsernameTextEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Username", "Username", 58, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.UsernameTextEdit.Properties.DataSource = this.userBindingSource;
+            this.UsernameTextEdit.Properties.DisplayMember = "Username";
+            this.UsernameTextEdit.Properties.NullText = "";
+            this.UsernameTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.UsernameTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.UsernameTextEdit.Properties.ValueMember = "Username";
             this.UsernameTextEdit.Size = new System.Drawing.Size(473, 20);
             this.UsernameTextEdit.StyleController = this.dataLayoutControl1;
             this.UsernameTextEdit.TabIndex = 7;
@@ -316,6 +335,10 @@
             // borrowedhistoryBindingSource
             // 
             this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Library_dApp.User);
             // 
             // LendForm
             // 
@@ -332,7 +355,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookISBNTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -349,8 +371,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.MemberTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,7 +386,6 @@
         private System.Windows.Forms.BindingSource borrowedhistoryBindingSource;
         private DevExpress.XtraEditors.TextEdit MemberIdTextEdit;
         private DevExpress.XtraEditors.TextEdit BookISBNTextEdit;
-        private DevExpress.XtraEditors.TextEdit StatusTextEdit;
         private DevExpress.XtraEditors.TextEdit BookTextEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
@@ -377,9 +400,11 @@
         private DevExpress.XtraEditors.SimpleButton CancelButton;
         private DevExpress.XtraEditors.DateEdit DueDateDateEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForDueDate;
-        private DevExpress.XtraEditors.TextEdit UsernameTextEdit;
         private DevExpress.XtraEditors.TextEdit MemberTextEdit;
         private DevExpress.XtraEditors.TextEdit UserTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForUsername;
+        private DevExpress.XtraEditors.ComboBoxEdit StatusTextEdit;
+        private DevExpress.XtraEditors.LookUpEdit UsernameTextEdit;
+        private System.Windows.Forms.BindingSource userBindingSource;
     }
 }
