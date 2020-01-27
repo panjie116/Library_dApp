@@ -98,3 +98,4 @@ C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\bin\Debug\ru\DevExpress.Pd
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.ListBooksForm.resources
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.NewMemberForm.resources
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.ListMembersForm.resources
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.LendForm.resources

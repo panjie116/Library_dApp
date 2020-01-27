@@ -16,6 +16,26 @@ namespace Library_dApp
         public LendForm()
         {
             InitializeComponent();
+            borrowedhistoryBindingSource.DataSource = new Borrowedhistory();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            var lendbook = (Borrowedhistory)borrowedhistoryBindingSource.DataSource;
+
+            var db = new LibraryEntities();
+
+            db.Borrowedhistories.Add(lendbook);
+            db.SaveChanges();
+
+            DialogResult = DialogResult.OK;
+            XtraMessageBox.Show("book lent sucessfully");
         }
     }
 }

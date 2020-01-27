@@ -176,6 +176,9 @@
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LendForm.resx">
+      <DependentUpon>LendForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListBooksForm.resx">
       <DependentUpon>ListBooksForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +213,7 @@
     </EntityDeploy>
     <None Include="App.Config" />
     <None Include="Book.datasource" />
+    <None Include="Borrowedhistory.datasource" />
     <None Include="Member.datasource" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
