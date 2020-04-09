@@ -56,5 +56,20 @@ namespace Library_dApp
             lendbook.ShowDialog();
             lendbook.WindowState = FormWindowState.Minimized;
         }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var overdue = new OverdueBooksForm();
+            overdue.Show();
+            overdue.WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var lentBooks = new ListLentBooksForm();
+            lentBooks.Show();
+            lentBooks.WindowState = FormWindowState.Maximized;
+        }
     }
 }

@@ -182,6 +182,9 @@
     <EmbeddedResource Include="ListBooksForm.resx">
       <DependentUpon>ListBooksForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListLentBooksForm.resx">
+      <DependentUpon>ListLentBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListMembersForm.resx">
       <DependentUpon>ListMembersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewMemberForm.resx">
       <DependentUpon>NewMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverdueBooksForm.resx">
+      <DependentUpon>OverdueBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
