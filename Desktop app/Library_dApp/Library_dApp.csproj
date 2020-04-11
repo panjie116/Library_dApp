@@ -78,6 +78,12 @@
     <Compile Include="LendForm.Designer.cs">
       <DependentUpon>LendForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LendForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LendForm2.Designer.cs">
+      <DependentUpon>LendForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListLentBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </Compile>
     <EmbeddedResource Include="LendForm.resx">
       <DependentUpon>LendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LendForm2.resx">
+      <DependentUpon>LendForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListBooksForm.resx">
       <DependentUpon>ListBooksForm.cs</DependentUpon>

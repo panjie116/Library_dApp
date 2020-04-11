@@ -33,7 +33,6 @@
             this.SavesimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.BookNameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BookISBNTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.AuthorTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.EditionTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -47,10 +46,10 @@
             this.ItemForEdition = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForYear_published = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForReserve_ = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookNameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookISBNTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditionTextEdit.Properties)).BeginInit();
@@ -65,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEdition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForYear_published)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForReserve_)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CancelsimpleButton
@@ -109,10 +109,6 @@
             this.BookNameTextEdit.Size = new System.Drawing.Size(375, 20);
             this.BookNameTextEdit.StyleController = this.dataLayoutControl1;
             this.BookNameTextEdit.TabIndex = 4;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(Library_dApp.Book);
             // 
             // BookISBNTextEdit
             // 
@@ -246,6 +242,10 @@
             this.ItemForReserve_.Text = "Reserve_";
             this.ItemForReserve_.TextSize = new System.Drawing.Size(73, 13);
             // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(Library_dApp.Book);
+            // 
             // NewBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,7 +259,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BookNameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookISBNTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditionTextEdit.Properties)).EndInit();
@@ -274,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEdition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForYear_published)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForReserve_)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

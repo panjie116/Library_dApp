@@ -101,3 +101,4 @@ C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.Lis
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.LendForm.resources
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.OverdueBooksForm.resources
 C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.ListLentBooksForm.resources
+C:\Users\panjie\Library_dApp\Desktop app\Library_dApp\obj\Debug\Library_dApp.LendForm2.resources

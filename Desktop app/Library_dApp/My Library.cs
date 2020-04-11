@@ -52,7 +52,7 @@ namespace Library_dApp
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var lendbook = new LendForm();
+            var lendbook = new LendForm2();
             lendbook.ShowDialog();
             lendbook.WindowState = FormWindowState.Minimized;
         }
