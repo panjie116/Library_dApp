@@ -67,9 +67,16 @@ namespace Library_dApp
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var lentBooks = new ListLentBooksForm();
+            var lentBooks = new ListLent();
+           // var lentBooks = new ListLentBooksForm();              
             lentBooks.Show();
             lentBooks.WindowState = FormWindowState.Maximized;
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var newUser = new AdduserForm();
+            newUser.ShowDialog();
         }
     }
 }

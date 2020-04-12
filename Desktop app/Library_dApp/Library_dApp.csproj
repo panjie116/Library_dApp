@@ -66,11 +66,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdduserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdduserForm.Designer.cs">
+      <DependentUpon>AdduserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Borrowedhistory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListLent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLent.Designer.cs">
+      <DependentUpon>ListLent.cs</DependentUpon>
     </Compile>
     <Compile Include="LendForm.cs">
       <SubType>Form</SubType>
@@ -182,6 +194,12 @@
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdduserForm.resx">
+      <DependentUpon>AdduserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLent.resx">
+      <DependentUpon>ListLent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LendForm.resx">
       <DependentUpon>LendForm.cs</DependentUpon>
     </EmbeddedResource>

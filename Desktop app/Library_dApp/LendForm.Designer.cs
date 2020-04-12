@@ -339,7 +339,6 @@
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(Library_dApp.User);
-            
             // 
             // LendForm
             // 

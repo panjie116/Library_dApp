@@ -30,36 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.MemberIdTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MemberNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ProgramTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.LevelTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.HostelTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.MemberIdTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForMemberId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.MemberNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForMemberName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ProgramTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForProgram = new DevExpress.XtraLayout.LayoutControlItem();
-            this.LevelTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForLevel = new DevExpress.XtraLayout.LayoutControlItem();
-            this.HostelTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForHostel = new DevExpress.XtraLayout.LayoutControlItem();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SavesimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.CancelsimpleButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProgramTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LevelTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HostelTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMemberId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMemberName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProgramTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForProgram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HostelTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForHostel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -76,6 +76,55 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(485, 180);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // MemberIdTextEdit
+            // 
+            this.MemberIdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "MemberId", true));
+            this.MemberIdTextEdit.Location = new System.Drawing.Point(83, 12);
+            this.MemberIdTextEdit.Name = "MemberIdTextEdit";
+            this.MemberIdTextEdit.Size = new System.Drawing.Size(390, 20);
+            this.MemberIdTextEdit.StyleController = this.dataLayoutControl1;
+            this.MemberIdTextEdit.TabIndex = 4;
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataSource = typeof(Library_dApp.Member);
+            // 
+            // MemberNameTextEdit
+            // 
+            this.MemberNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "MemberName", true));
+            this.MemberNameTextEdit.Location = new System.Drawing.Point(83, 36);
+            this.MemberNameTextEdit.Name = "MemberNameTextEdit";
+            this.MemberNameTextEdit.Size = new System.Drawing.Size(390, 20);
+            this.MemberNameTextEdit.StyleController = this.dataLayoutControl1;
+            this.MemberNameTextEdit.TabIndex = 5;
+            // 
+            // ProgramTextEdit
+            // 
+            this.ProgramTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "Program", true));
+            this.ProgramTextEdit.Location = new System.Drawing.Point(83, 60);
+            this.ProgramTextEdit.Name = "ProgramTextEdit";
+            this.ProgramTextEdit.Size = new System.Drawing.Size(390, 20);
+            this.ProgramTextEdit.StyleController = this.dataLayoutControl1;
+            this.ProgramTextEdit.TabIndex = 6;
+            // 
+            // LevelTextEdit
+            // 
+            this.LevelTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "Level", true));
+            this.LevelTextEdit.Location = new System.Drawing.Point(83, 84);
+            this.LevelTextEdit.Name = "LevelTextEdit";
+            this.LevelTextEdit.Size = new System.Drawing.Size(390, 20);
+            this.LevelTextEdit.StyleController = this.dataLayoutControl1;
+            this.LevelTextEdit.TabIndex = 7;
+            // 
+            // HostelTextEdit
+            // 
+            this.HostelTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "Hostel", true));
+            this.HostelTextEdit.Location = new System.Drawing.Point(83, 108);
+            this.HostelTextEdit.Name = "HostelTextEdit";
+            this.HostelTextEdit.Size = new System.Drawing.Size(390, 20);
+            this.HostelTextEdit.StyleController = this.dataLayoutControl1;
+            this.HostelTextEdit.TabIndex = 8;
             // 
             // layoutControlGroup1
             // 
@@ -102,15 +151,6 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(465, 160);
             // 
-            // MemberIdTextEdit
-            // 
-            this.MemberIdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "MemberId", true));
-            this.MemberIdTextEdit.Location = new System.Drawing.Point(84, 12);
-            this.MemberIdTextEdit.Name = "MemberIdTextEdit";
-            this.MemberIdTextEdit.Size = new System.Drawing.Size(389, 20);
-            this.MemberIdTextEdit.StyleController = this.dataLayoutControl1;
-            this.MemberIdTextEdit.TabIndex = 4;
-            // 
             // ItemForMemberId
             // 
             this.ItemForMemberId.Control = this.MemberIdTextEdit;
@@ -119,15 +159,6 @@
             this.ItemForMemberId.Size = new System.Drawing.Size(465, 24);
             this.ItemForMemberId.Text = "Member Id";
             this.ItemForMemberId.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // MemberNameTextEdit
-            // 
-            this.MemberNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "MemberName", true));
-            this.MemberNameTextEdit.Location = new System.Drawing.Point(84, 36);
-            this.MemberNameTextEdit.Name = "MemberNameTextEdit";
-            this.MemberNameTextEdit.Size = new System.Drawing.Size(389, 20);
-            this.MemberNameTextEdit.StyleController = this.dataLayoutControl1;
-            this.MemberNameTextEdit.TabIndex = 5;
             // 
             // ItemForMemberName
             // 
@@ -138,15 +169,6 @@
             this.ItemForMemberName.Text = "Member Name";
             this.ItemForMemberName.TextSize = new System.Drawing.Size(68, 13);
             // 
-            // ProgramTextEdit
-            // 
-            this.ProgramTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "Program", true));
-            this.ProgramTextEdit.Location = new System.Drawing.Point(84, 60);
-            this.ProgramTextEdit.Name = "ProgramTextEdit";
-            this.ProgramTextEdit.Size = new System.Drawing.Size(389, 20);
-            this.ProgramTextEdit.StyleController = this.dataLayoutControl1;
-            this.ProgramTextEdit.TabIndex = 6;
-            // 
             // ItemForProgram
             // 
             this.ItemForProgram.Control = this.ProgramTextEdit;
@@ -155,15 +177,6 @@
             this.ItemForProgram.Size = new System.Drawing.Size(465, 24);
             this.ItemForProgram.Text = "Program";
             this.ItemForProgram.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // LevelTextEdit
-            // 
-            this.LevelTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "Level", true));
-            this.LevelTextEdit.Location = new System.Drawing.Point(84, 84);
-            this.LevelTextEdit.Name = "LevelTextEdit";
-            this.LevelTextEdit.Size = new System.Drawing.Size(389, 20);
-            this.LevelTextEdit.StyleController = this.dataLayoutControl1;
-            this.LevelTextEdit.TabIndex = 7;
             // 
             // ItemForLevel
             // 
@@ -174,15 +187,6 @@
             this.ItemForLevel.Text = "Level";
             this.ItemForLevel.TextSize = new System.Drawing.Size(68, 13);
             // 
-            // HostelTextEdit
-            // 
-            this.HostelTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "Hostel", true));
-            this.HostelTextEdit.Location = new System.Drawing.Point(84, 108);
-            this.HostelTextEdit.Name = "HostelTextEdit";
-            this.HostelTextEdit.Size = new System.Drawing.Size(389, 20);
-            this.HostelTextEdit.StyleController = this.dataLayoutControl1;
-            this.HostelTextEdit.TabIndex = 8;
-            // 
             // ItemForHostel
             // 
             this.ItemForHostel.Control = this.HostelTextEdit;
@@ -191,10 +195,6 @@
             this.ItemForHostel.Size = new System.Drawing.Size(465, 64);
             this.ItemForHostel.Text = "Hostel";
             this.ItemForHostel.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataSource = typeof(Library_dApp.Member);
             // 
             // SavesimpleButton
             // 
@@ -226,19 +226,19 @@
             this.Text = "NewMemberForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProgramTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LevelTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HostelTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMemberId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMemberName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProgramTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForProgram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HostelTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForHostel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

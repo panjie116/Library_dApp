@@ -45,6 +45,8 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataMember = null;
+            this.gridControl1.DataSource = this.borrowedhistoryBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
