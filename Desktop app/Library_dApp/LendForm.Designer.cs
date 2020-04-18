@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.MemberNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.borrowedhistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MemberIdTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.BookISBNTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.DueDateDateEdit = new DevExpress.XtraEditors.DateEdit();
@@ -39,6 +40,7 @@
             this.UserTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.StatusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.UsernameTextEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ItemForBook = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForMember = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForUser = new DevExpress.XtraLayout.LayoutControlItem();
@@ -52,11 +54,10 @@
             this.ItemForUsername = new DevExpress.XtraLayout.LayoutControlItem();
             this.SaveButton = new DevExpress.XtraEditors.SimpleButton();
             this.CancelButton = new DevExpress.XtraEditors.SimpleButton();
-            this.borrowedhistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookISBNTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DueDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMember)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUser)).BeginInit();
@@ -77,8 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDueDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -113,6 +113,10 @@
             this.MemberNameTextEdit.Size = new System.Drawing.Size(473, 20);
             this.MemberNameTextEdit.StyleController = this.dataLayoutControl1;
             this.MemberNameTextEdit.TabIndex = 4;
+            // 
+            // borrowedhistoryBindingSource
+            // 
+            this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
             // 
             // MemberIdTextEdit
             // 
@@ -206,6 +210,10 @@
             this.UsernameTextEdit.Size = new System.Drawing.Size(473, 20);
             this.UsernameTextEdit.StyleController = this.dataLayoutControl1;
             this.UsernameTextEdit.TabIndex = 7;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Library_dApp.User);
             // 
             // ItemForBook
             // 
@@ -332,14 +340,6 @@
             this.CancelButton.Text = "Cancel";
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // borrowedhistoryBindingSource
-            // 
-            this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(Library_dApp.User);
-            // 
             // LendForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookISBNTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DueDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
@@ -362,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMember)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUser)).EndInit();
@@ -373,8 +375,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDueDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

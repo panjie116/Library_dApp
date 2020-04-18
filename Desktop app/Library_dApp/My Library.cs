@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace Library_dApp
 {
@@ -27,12 +28,14 @@ namespace Library_dApp
         {
             var newbook = new NewBookForm();
             newbook.ShowDialog();
+            newbook.MdiParent = this;
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var listBooks = new ListBooksForm();
             listBooks.Show();
+            listBooks.MdiParent = this;
             listBooks.WindowState = FormWindowState.Maximized;
         }
 
@@ -40,6 +43,7 @@ namespace Library_dApp
         {
             var newMember = new NewMemberForm();
             newMember.ShowDialog();
+            newMember.MdiParent = this;
             newMember.WindowState = FormWindowState.Minimized;
         }
 
@@ -47,6 +51,7 @@ namespace Library_dApp
         {
             var listMembers = new ListMembersForm();
             listMembers.Show();
+            listMembers.MdiParent = this;
             listMembers.WindowState = FormWindowState.Maximized;
         }
 
@@ -54,6 +59,7 @@ namespace Library_dApp
         {
             var lendbook = new LendForm2();
             lendbook.ShowDialog();
+            lendbook.MdiParent = this;
             lendbook.WindowState = FormWindowState.Minimized;
         }
 
@@ -61,6 +67,7 @@ namespace Library_dApp
         {
             var overdue = new OverdueBooksForm();
             overdue.Show();
+            overdue.MdiParent = this;
             overdue.WindowState = FormWindowState.Maximized;
 
         }
@@ -70,6 +77,7 @@ namespace Library_dApp
             var lentBooks = new ListLent();
            // var lentBooks = new ListLentBooksForm();              
             lentBooks.Show();
+            lentBooks.MdiParent = this;
             lentBooks.WindowState = FormWindowState.Maximized;
         }
 
@@ -77,6 +85,36 @@ namespace Library_dApp
         {
             var newUser = new AdduserForm();
             newUser.ShowDialog();
+            newUser.MdiParent = this;
         }
-    }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var ListUsers = new ListUsersForm();
+            ListUsers.Show();
+            ListUsers.MdiParent = this;
+            ListUsers.WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (XtraMessageBox.Show("are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (var item in this.MdiChildren)
+                {
+                    item.Close();
+                }
+
+                var login = new logInForm();
+                var result = login.ShowDialog();
+                if (result != DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+
+            }    
+
+            }
+        }
 }

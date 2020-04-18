@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.borrowedhistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMemberName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMemberId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -37,10 +38,9 @@
             this.colUsername = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDueDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.borrowedhistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -55,6 +55,10 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // borrowedhistoryBindingSource
+            // 
+            this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
             // 
             // gridView1
             // 
@@ -110,10 +114,6 @@
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 5;
             // 
-            // borrowedhistoryBindingSource
-            // 
-            this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
-            // 
             // ListLentBooksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,10 +121,11 @@
             this.ClientSize = new System.Drawing.Size(628, 470);
             this.Controls.Add(this.gridControl1);
             this.Name = "ListLentBooksForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LentBooksForm";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
