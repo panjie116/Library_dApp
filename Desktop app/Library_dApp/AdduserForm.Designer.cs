@@ -30,34 +30,34 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.FullNameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.UsernameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.PasswordTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.PhoneNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.FullNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForFullName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.UsernameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForUsername = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PasswordTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForPassword = new DevExpress.XtraLayout.LayoutControlItem();
+            this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PhoneNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForPhoneNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SavesimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.cancelsimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForFullName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -76,51 +76,6 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(428, 228);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
-            // 
-            // FullNameTextEdit
-            // 
-            this.FullNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "FullName", true));
-            this.FullNameTextEdit.Location = new System.Drawing.Point(85, 12);
-            this.FullNameTextEdit.Name = "FullNameTextEdit";
-            this.FullNameTextEdit.Size = new System.Drawing.Size(331, 20);
-            this.FullNameTextEdit.StyleController = this.dataLayoutControl1;
-            this.FullNameTextEdit.TabIndex = 4;
-            // 
-            // UsernameTextEdit
-            // 
-            this.UsernameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Username", true));
-            this.UsernameTextEdit.Location = new System.Drawing.Point(85, 36);
-            this.UsernameTextEdit.Name = "UsernameTextEdit";
-            this.UsernameTextEdit.Size = new System.Drawing.Size(331, 20);
-            this.UsernameTextEdit.StyleController = this.dataLayoutControl1;
-            this.UsernameTextEdit.TabIndex = 5;
-            // 
-            // PasswordTextEdit
-            // 
-            this.PasswordTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Password", true));
-            this.PasswordTextEdit.Location = new System.Drawing.Point(85, 60);
-            this.PasswordTextEdit.Name = "PasswordTextEdit";
-            this.PasswordTextEdit.Size = new System.Drawing.Size(331, 20);
-            this.PasswordTextEdit.StyleController = this.dataLayoutControl1;
-            this.PasswordTextEdit.TabIndex = 6;
-            // 
-            // EmailTextEdit
-            // 
-            this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Email", true));
-            this.EmailTextEdit.Location = new System.Drawing.Point(85, 84);
-            this.EmailTextEdit.Name = "EmailTextEdit";
-            this.EmailTextEdit.Size = new System.Drawing.Size(331, 20);
-            this.EmailTextEdit.StyleController = this.dataLayoutControl1;
-            this.EmailTextEdit.TabIndex = 7;
-            // 
-            // PhoneNumberTextEdit
-            // 
-            this.PhoneNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "PhoneNumber", true));
-            this.PhoneNumberTextEdit.Location = new System.Drawing.Point(85, 108);
-            this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
-            this.PhoneNumberTextEdit.Size = new System.Drawing.Size(331, 20);
-            this.PhoneNumberTextEdit.StyleController = this.dataLayoutControl1;
-            this.PhoneNumberTextEdit.TabIndex = 8;
             // 
             // layoutControlGroup1
             // 
@@ -147,6 +102,15 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(408, 208);
             // 
+            // FullNameTextEdit
+            // 
+            this.FullNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "FullName", true));
+            this.FullNameTextEdit.Location = new System.Drawing.Point(86, 12);
+            this.FullNameTextEdit.Name = "FullNameTextEdit";
+            this.FullNameTextEdit.Size = new System.Drawing.Size(330, 20);
+            this.FullNameTextEdit.StyleController = this.dataLayoutControl1;
+            this.FullNameTextEdit.TabIndex = 4;
+            // 
             // ItemForFullName
             // 
             this.ItemForFullName.Control = this.FullNameTextEdit;
@@ -155,6 +119,15 @@
             this.ItemForFullName.Size = new System.Drawing.Size(408, 24);
             this.ItemForFullName.Text = "Full Name";
             this.ItemForFullName.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // UsernameTextEdit
+            // 
+            this.UsernameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Username", true));
+            this.UsernameTextEdit.Location = new System.Drawing.Point(86, 36);
+            this.UsernameTextEdit.Name = "UsernameTextEdit";
+            this.UsernameTextEdit.Size = new System.Drawing.Size(330, 20);
+            this.UsernameTextEdit.StyleController = this.dataLayoutControl1;
+            this.UsernameTextEdit.TabIndex = 5;
             // 
             // ItemForUsername
             // 
@@ -165,6 +138,15 @@
             this.ItemForUsername.Text = "Username";
             this.ItemForUsername.TextSize = new System.Drawing.Size(70, 13);
             // 
+            // PasswordTextEdit
+            // 
+            this.PasswordTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Password", true));
+            this.PasswordTextEdit.Location = new System.Drawing.Point(86, 60);
+            this.PasswordTextEdit.Name = "PasswordTextEdit";
+            this.PasswordTextEdit.Size = new System.Drawing.Size(330, 20);
+            this.PasswordTextEdit.StyleController = this.dataLayoutControl1;
+            this.PasswordTextEdit.TabIndex = 6;
+            // 
             // ItemForPassword
             // 
             this.ItemForPassword.Control = this.PasswordTextEdit;
@@ -173,6 +155,15 @@
             this.ItemForPassword.Size = new System.Drawing.Size(408, 24);
             this.ItemForPassword.Text = "Password";
             this.ItemForPassword.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // EmailTextEdit
+            // 
+            this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Email", true));
+            this.EmailTextEdit.Location = new System.Drawing.Point(86, 84);
+            this.EmailTextEdit.Name = "EmailTextEdit";
+            this.EmailTextEdit.Size = new System.Drawing.Size(330, 20);
+            this.EmailTextEdit.StyleController = this.dataLayoutControl1;
+            this.EmailTextEdit.TabIndex = 7;
             // 
             // ItemForEmail
             // 
@@ -183,6 +174,15 @@
             this.ItemForEmail.Text = "Email";
             this.ItemForEmail.TextSize = new System.Drawing.Size(70, 13);
             // 
+            // PhoneNumberTextEdit
+            // 
+            this.PhoneNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "PhoneNumber", true));
+            this.PhoneNumberTextEdit.Location = new System.Drawing.Point(86, 108);
+            this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
+            this.PhoneNumberTextEdit.Size = new System.Drawing.Size(330, 20);
+            this.PhoneNumberTextEdit.StyleController = this.dataLayoutControl1;
+            this.PhoneNumberTextEdit.TabIndex = 8;
+            // 
             // ItemForPhoneNumber
             // 
             this.ItemForPhoneNumber.Control = this.PhoneNumberTextEdit;
@@ -191,6 +191,10 @@
             this.ItemForPhoneNumber.Size = new System.Drawing.Size(408, 112);
             this.ItemForPhoneNumber.Text = "Phone Number";
             this.ItemForPhoneNumber.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Library_dApp.User);
             // 
             // SavesimpleButton
             // 
@@ -210,10 +214,6 @@
             this.cancelsimpleButton.Text = "Cancel";
             this.cancelsimpleButton.Click += new System.EventHandler(this.cancelsimpleButton_Click);
             // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(Library_dApp.User);
-            // 
             // AdduserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,17 +226,17 @@
             this.Text = "AdduserForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForFullName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);

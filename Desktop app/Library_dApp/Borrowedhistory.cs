@@ -14,15 +14,10 @@ namespace Library_dApp
     
     public partial class Borrowedhistory
     {
-        public string MemberName { get; set; }
         public string MemberId { get; set; }
         public string BookISBN { get; set; }
         public string Username { get; set; }
         public System.DateTime DueDate { get; set; }
         public string Status { get; set; }
-    
-        public virtual Book Book { get; set; }
-        public virtual Member Member { get; set; }
-        public virtual User User { get; set; }
     }
 }

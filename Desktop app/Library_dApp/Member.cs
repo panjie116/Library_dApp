@@ -14,19 +14,10 @@ namespace Library_dApp
     
     public partial class Member
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Member()
-        {
-            this.Borrowedhistories = new HashSet<Borrowedhistory>();
-        }
-    
         public string MemberId { get; set; }
         public string MemberName { get; set; }
         public string Program { get; set; }
         public string Level { get; set; }
         public string Hostel { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Borrowedhistory> Borrowedhistories { get; set; }
     }
 }

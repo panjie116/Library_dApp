@@ -2,7 +2,7 @@
 <Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Books">
     <Key>
-      <PropertyRef Name="BookISBN" />
+      <PropertyRef Name="BookName" />
     </Key>
     <Property Name="BookName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="BookISBN" Type="varchar" MaxLength="50" Nullable="false" />
@@ -11,11 +11,16 @@
     <Property Name="Year published" Type="date" Nullable="false" />
     <Property Name="Reserve?" Type="bit" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Library.dbo.Borrowedhistories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Borrowedhistories">
     <Key>
-      <PropertyRef Name="MemberName" />
+      <PropertyRef Name="MemberId" />
+      <PropertyRef Name="BookISBN" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="DueDate" />
+      <PropertyRef Name="Status" />
     </Key>
-    <Property Name="MemberName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="MemberId" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="BookISBN" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
@@ -25,7 +30,6 @@
   <EntityType Name="Members">
     <Key>
       <PropertyRef Name="MemberId" />
-      <PropertyRef Name="MemberName" />
     </Key>
     <Property Name="MemberId" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="MemberName" Type="varchar" MaxLength="50" Nullable="false" />
@@ -53,92 +57,19 @@
     <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Borrowedhistories_Books">
-    <End Role="Books" Type="Self.Books" Multiplicity="1" />
-    <End Role="Borrowedhistories" Type="Self.Borrowedhistories" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Books">
-        <PropertyRef Name="BookISBN" />
-      </Principal>
-      <Dependent Role="Borrowedhistories">
-        <PropertyRef Name="BookISBN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Borrowedhistories_Members">
-    <End Role="Members" Type="Self.Members" Multiplicity="1" />
-    <End Role="Borrowedhistories" Type="Self.Borrowedhistories" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Members">
-        <PropertyRef Name="MemberId" />
-        <PropertyRef Name="MemberName" />
-      </Principal>
-      <Dependent Role="Borrowedhistories">
-        <PropertyRef Name="MemberId" />
-        <PropertyRef Name="MemberName" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Borrowedhistories_Users">
-    <End Role="Users" Type="Self.Users" Multiplicity="1" />
-    <End Role="Borrowedhistories" Type="Self.Borrowedhistories" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Users">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="Borrowedhistories">
-        <PropertyRef Name="Username" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="LibraryModelStoreContainer">
     <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Borrowedhistories" EntityType="Self.Borrowedhistories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Borrowedhistories_Books" Association="Self.FK_Borrowedhistories_Books">
-      <End Role="Books" EntitySet="Books" />
-      <End Role="Borrowedhistories" EntitySet="Borrowedhistories" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Borrowedhistories_Members" Association="Self.FK_Borrowedhistories_Members">
-      <End Role="Members" EntitySet="Members" />
-      <End Role="Borrowedhistories" EntitySet="Borrowedhistories" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Borrowedhistories_Users" Association="Self.FK_Borrowedhistories_Users">
-      <End Role="Users" EntitySet="Users" />
-      <End Role="Borrowedhistories" EntitySet="Borrowedhistories" />
-    </AssociationSet>
+    <EntitySet Name="Borrowedhistories" EntityType="Self.Borrowedhistories" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Borrowedhistories].[MemberId] AS [MemberId], 
+    [Borrowedhistories].[BookISBN] AS [BookISBN], 
+    [Borrowedhistories].[Username] AS [Username], 
+    [Borrowedhistories].[DueDate] AS [DueDate], 
+    [Borrowedhistories].[Status] AS [Status]
+    FROM [dbo].[Borrowedhistories] AS [Borrowedhistories]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

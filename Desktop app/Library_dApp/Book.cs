@@ -14,20 +14,11 @@ namespace Library_dApp
     
     public partial class Book
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Book()
-        {
-            this.Borrowedhistories = new HashSet<Borrowedhistory>();
-        }
-    
         public string BookName { get; set; }
         public string BookISBN { get; set; }
         public string Author { get; set; }
         public string Edition { get; set; }
         public System.DateTime Year_published { get; set; }
         public bool Reserve_ { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Borrowedhistory> Borrowedhistories { get; set; }
     }
 }

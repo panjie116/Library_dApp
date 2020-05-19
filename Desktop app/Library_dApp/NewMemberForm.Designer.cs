@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.MemberIdTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MemberNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ProgramTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.LevelTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -44,10 +45,10 @@
             this.ItemForHostel = new DevExpress.XtraLayout.LayoutControlItem();
             this.SavesimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.CancelsimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProgramTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LevelTextEdit.Properties)).BeginInit();
@@ -59,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForProgram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForHostel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -85,6 +85,10 @@
             this.MemberIdTextEdit.Size = new System.Drawing.Size(390, 20);
             this.MemberIdTextEdit.StyleController = this.dataLayoutControl1;
             this.MemberIdTextEdit.TabIndex = 4;
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataSource = typeof(Library_dApp.Member);
             // 
             // MemberNameTextEdit
             // 
@@ -210,10 +214,6 @@
             this.CancelsimpleButton.Text = "Cancel";
             this.CancelsimpleButton.Click += new System.EventHandler(this.CancelsimpleButton_Click);
             // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataSource = typeof(Library_dApp.Member);
-            // 
             // NewMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MemberIdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemberNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProgramTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LevelTextEdit.Properties)).EndInit();
@@ -238,7 +239,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForProgram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForHostel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

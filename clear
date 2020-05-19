@@ -1,0 +1,109 @@
+[33mcommit 2fdf6411a91296749e8661cfd77c5d26cb3ad194[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Tue May 19 13:43:57 2020 +0200
+
+    Revert "made all chirdforms to look at the mainform as parent form"
+    
+    This reverts commit 08e17e4ef916bd260db23885eb47ca7dca38c72a.
+
+[33mcommit 08e17e4ef916bd260db23885eb47ca7dca38c72a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mlendformFix[m[33m)[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Sat Apr 18 11:43:32 2020 +0200
+
+    made all chirdforms to look at the mainform as parent form
+
+[33mcommit 9e57926821062be449c0ab00440c67cca779f2f8[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Sun Apr 12 09:31:48 2020 +0200
+
+    implemented add user form
+
+[33mcommit 2f764db24b9c030c6a25f9637f82e6cb9cd5af46[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Sat Apr 11 08:34:42 2020 +0200
+
+    added fix for lendform
+
+[33mcommit 5322b1abacfb1d8c9b059c31c4c1ad3abf491906[m[33m ([m[1;32mcheckout[m[33m)[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Thu Apr 9 16:16:50 2020 +0200
+
+    fixed borrowedHistories table where BookISBN was not unique
+
+[33mcommit c96aae00da4e4ca04c681dfdf6994b93c424267b[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Mon Jan 27 18:08:51 2020 +0200
+
+    changed changed username textEdit to lookUpEdit in lendbook form
+
+[33mcommit 546654e90a23e453fede5985c514aa10a72dbba7[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Mon Jan 27 17:05:10 2020 +0200
+
+    implemented 'lend book form'
+
+[33mcommit d12455c1a724230c09d2bcd10d77bfa08cbbafff[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Mon Jan 27 16:20:02 2020 +0200
+
+    implemented 'list members form'
+
+[33mcommit b19b363fcb6c73b14345e8baf51364ca63f7fdc5[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Sat Jan 25 16:28:33 2020 +0200
+
+    implemented 'new member form'
+
+[33mcommit 213ca7a95aa9c5b71b06d26ee4ed0c7b2d2e46da[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Thu Jan 23 17:51:13 2020 +0200
+
+    implemented 'list books form'
+
+[33mcommit cf755c3f796b0d7d985adaadbb37b951a41fc742[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Thu Jan 23 13:01:57 2020 +0200
+
+    implemented add new book
+
+[33mcommit 91ba2a217b27e3f54fd26160f639aad2a92c75f3[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Thu Jan 23 12:15:08 2020 +0200
+
+    implemented login
+
+[33mcommit d892067913453f8524c569d22a599c2bf33b7270[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Thu Jan 23 11:47:26 2020 +0200
+
+    added database to the project using entity framework
+
+[33mcommit e56c68619626d3d4f7eadd74edb827f45699915d[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Thu Jan 23 11:26:42 2020 +0200
+
+    added user forms
+
+[33mcommit f7a22cf8f2ff68f824b69e24ae8b4724a3cc3fe6[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Sun Jan 19 14:37:54 2020 +0200
+
+    added 'returned books' to toolbar
+
+[33mcommit 0338cd9a6d509b78eee1c52572face750ef80ec4[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Tue Jan 14 10:48:21 2020 +0200
+
+    implemented main form ribbon
+
+[33mcommit ad01161e238df3c94129d17fe3497e544ebae5e3[m
+Author: panjie116 <msowoya.panji@gmail.com>
+Date:   Fri Jan 3 16:30:43 2020 +0200
+
+    started the project with entity framework
+
+[33mcommit fd06c823e14565c7154c3821b4a6539ef9816464[m
+Author: panjie msowoya <38115401+panjie116@users.noreply.github.com>
+Date:   Thu Jan 2 08:35:09 2020 +0200
+
+    Initial commit

@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.borrowedhistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMemberName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMemberId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBookISBN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUsername = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDueDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // borrowedhistoryBindingSource
+            // 
+            this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
+            // 
             // gridControl1
             // 
-            this.gridControl1.DataMember = null;
             this.gridControl1.DataSource = this.borrowedhistoryBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -56,14 +58,9 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // borrowedhistoryBindingSource
-            // 
-            this.borrowedhistoryBindingSource.DataSource = typeof(Library_dApp.Borrowedhistory);
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMemberName,
             this.colMemberId,
             this.colBookISBN,
             this.colUsername,
@@ -72,47 +69,40 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colMemberName
-            // 
-            this.colMemberName.FieldName = "MemberName";
-            this.colMemberName.Name = "colMemberName";
-            this.colMemberName.Visible = true;
-            this.colMemberName.VisibleIndex = 0;
-            // 
             // colMemberId
             // 
             this.colMemberId.FieldName = "MemberId";
             this.colMemberId.Name = "colMemberId";
             this.colMemberId.Visible = true;
-            this.colMemberId.VisibleIndex = 1;
+            this.colMemberId.VisibleIndex = 0;
             // 
             // colBookISBN
             // 
             this.colBookISBN.FieldName = "BookISBN";
             this.colBookISBN.Name = "colBookISBN";
             this.colBookISBN.Visible = true;
-            this.colBookISBN.VisibleIndex = 2;
+            this.colBookISBN.VisibleIndex = 1;
             // 
             // colUsername
             // 
             this.colUsername.FieldName = "Username";
             this.colUsername.Name = "colUsername";
             this.colUsername.Visible = true;
-            this.colUsername.VisibleIndex = 3;
+            this.colUsername.VisibleIndex = 2;
             // 
             // colDueDate
             // 
             this.colDueDate.FieldName = "DueDate";
             this.colDueDate.Name = "colDueDate";
             this.colDueDate.Visible = true;
-            this.colDueDate.VisibleIndex = 4;
+            this.colDueDate.VisibleIndex = 3;
             // 
             // colStatus
             // 
             this.colStatus.FieldName = "Status";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 5;
+            this.colStatus.VisibleIndex = 4;
             // 
             // ListLentBooksForm
             // 
@@ -121,21 +111,18 @@
             this.ClientSize = new System.Drawing.Size(628, 470);
             this.Controls.Add(this.gridControl1);
             this.Name = "ListLentBooksForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LentBooksForm";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.borrowedhistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource borrowedhistoryBindingSource;
+        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMemberName;
         private DevExpress.XtraGrid.Columns.GridColumn colMemberId;
         private DevExpress.XtraGrid.Columns.GridColumn colBookISBN;
         private DevExpress.XtraGrid.Columns.GridColumn colUsername;
