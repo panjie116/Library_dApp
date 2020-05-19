@@ -10,17 +10,10 @@
 namespace Library_dApp
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Book
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public string BookName { get; set; }
-        public string BookISBN { get; set; }
-        public string Author { get; set; }
-        public string Edition { get; set; }
-        public System.DateTime Year_published { get; set; }
-        public bool Reserve_ { get; set; }
-    
-        public virtual Borrowedhistory Borrowedhistory { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

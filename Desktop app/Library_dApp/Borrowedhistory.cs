@@ -19,5 +19,9 @@ namespace Library_dApp
         public string Username { get; set; }
         public System.DateTime DueDate { get; set; }
         public string Status { get; set; }
+    
+        public virtual Book Book { get; set; }
+        public virtual Member Member { get; set; }
+        public virtual User User { get; set; }
     }
 }
